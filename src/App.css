@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* App.css */
+
+.app-container {
+  font-family: 'Roboto', sans-serif;
+  background-color: #223a5f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+/* Navbar UL + LI styling */
+.nav-items {
+  background-color: #2c3e50;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+}
+
+.nav-items li {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/* Logo */
+.logo {
+  height: 40px;
+}
+
+/* Score + Timer */
+.score-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.score-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f9d423;
+}
+
+.clock-logo {
+  height: 25px;
+  margin: 0 5px;
+}
+
+.timer {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Game Area */
+.bottom-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.main-thumbnail-image {
+  height: 400px;
+  width: 650px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
+/* Tabs */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.tab-item {
+  margin: 0 10px;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.tab-name {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button.active .tab-name {
+  color: #f9d423;
+  border-bottom: 2px solid #f9d423;
+}
+
+/* Thumbnails */
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  list-style-type: none;
+  padding: 0;
+  max-width: 1000px;
+}
+
+.thumbnail-image {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail-image:hover {
+  transform: scale(1.05);
+}
+
+/* Scorecard */
+.score-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.trophy {
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.play-again-button {
+  background-color: #f9d423;
+  color: #223a5f;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.play-again-button:hover {
+  background-color: #f39c12;
+}
+
+/* 📱 Mobile devices (up to 480px) */
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .main-thumbnail-image {
+    height: 180px;
+    width: 100%;
+  }
+
+  .tabs-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .thumbnail-image {
+    height: 90px;
+    width: 90px;
+  }
+
+  .score-text,
+  .timer {
+    font-size: 14px;
+  }
+}
+
+/* 📲 Tablets (481px – 768px) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .main-thumbnail-image {
+    height: 250px;
+    width: 100%;
+  }
+
+  .thumbnail-container {
+    gap: 10px;
+  }
+
+  .thumbnail-image {
+    height: 110px;
+    width: 110px;
+  }
+
+  .tab-name {
+    font-size: 16px;
+  }
+}
+
+/* 💻 Small laptops (769px – 1024px) */
+@media screen and (max-width: 1024px) {
+  .bottom-container {
+    padding: 20px;
+  }
+
+  .main-thumbnail-image {
+    height: 300px;
+    width: 100%;
+  }
+
+  .thumbnail-image {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+/* 🖥️ Large desktops (1200px and above) */
+@media screen and (min-width: 1200px) {
+  .bottom-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .main-thumbnail-image {
+    height: 400px;
+    width: 650px;
+  }
+
+  .thumbnail-image {
+    height: 150px;
+    width: 150px;
+  }
+}
